@@ -1,0 +1,182 @@
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: 'Raleway', sans-serif;
+    max-width: 90rem;
+    width: 90vw;
+    margin: 0 auto;
+    color: #555;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.wrapper {
+    display: grid;
+    padding: 1rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    min-width: 50rem;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.input-block-wrapper {
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    min-width: 20rem;
+    box-shadow: 0rem 0.3rem 0.3rem 0.1rem rgba(150, 150, 150, 0.2);
+}
+
+input, textarea{
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 0.3rem;
+    min-height: 2rem;
+    width: 100%;
+    resize: none;
+
+}
+
+
+input:focus, input:active, textarea:focus, textarea:active {
+    border: 2px solid #e5e5e5;
+    box-shadow: 0 0 0.3rem 0.1rem rgba(74, 167, 238, 0.3);
+    outline: none;
+}
+
+textarea::placeholder{
+    font-family: 'Raleway', sans-serif;
+    color: #555;
+}
+
+.buttons-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+button {
+    padding: 0.3rem 1rem;    
+    border: 2px solid #ddd;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+button:hover, button:focus{
+    box-shadow: 0 0 0.3rem 0.2rem rgba(74, 167, 238, 0.3);
+}
+
+button:active {
+    transform: translateY(0.2rem);
+}
+
+#send-button{
+    color: #555;
+    background-color: #fff;
+}
+
+#save-button{
+    color: #555;
+    background-color: #ddd;
+}
+
+.input-drop-down{
+    cursor:pointer;
+    background-image: url(./svg/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: top 0.5rem right 0.3rem;
+    background-size: 1.1rem;
+}
+
+.time{
+    background-image: url(./svg/timeIco.svg);
+}
+
+.two-inputs{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+}
+
+#job-description{
+    text-align: start;
+    padding: 0.5rem;
+    height: 5rem;
+
+}
+
+.dropdown-wrap{
+    width: 100%;
+    position: relative;
+}
+
+.dropdown-menu{
+    list-style: none;
+    padding: 0.5rem;
+    position: absolute;
+    width: 100%;
+    top: 1.2rem;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0.2rem 0.3rem 0.1rem rgba(121, 121, 121, 0.2);
+    opacity: 0;
+    display: none;
+    transition: 0.3s;
+}
+
+.dropdown-menu li {
+    padding: 0.5rem;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s;
+}
+
+.dropdown-menu li:last-of-type {
+    border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+    font-weight: 700;
+    background-color: #ddd;
+}
+
+.dropdown-menu-open {
+    display: block;
+    opacity: 1;
+    z-index: 10;
+}
+
+
